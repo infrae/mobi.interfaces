@@ -1,5 +1,6 @@
 from zope.interface import Interface, Attribute
 
+
 class IRenderingEngine(Interface):
 
     name = Attribute('name of the template, [a-zA-Z_] only')
@@ -20,10 +21,28 @@ class IRenderingEngine(Interface):
 class IWidget(Interface):
     """ Widget base interface
     """
+
+    page = Attribute('')
+
+    def update():
+        """ Prepare the view
+        """
+
     def render():
-        """ render widget content
-            attributes are added to the first
-            tag of the widget
+        """ render widget content this method is optional
+        """
+
+
+class IPage(IWidget):
+    """ A page
+    """
+
+    def register_resource(namespace):
+        """ register a resource for the namespace to be rendered later
+        """
+
+    def render_resources(namespace):
+        """ render resources for the namespace
         """
 
 
@@ -33,3 +52,21 @@ class IFieldWidget(IWidget):
     def get_value():
         """ return value of the field
         """
+
+
+class IResource(Interface):
+
+    def __eq__():
+        """ method to compare resources to keep them unique
+        """
+
+    def __call__():
+        """ render the resource
+        """
+
+
+class IHTMLTagResource(IResource):
+    """ a resource which is a html tag (e.g: link)
+    """
+
+
