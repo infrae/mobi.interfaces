@@ -5,15 +5,11 @@ class IRenderingEngine(Interface):
 
     name = Attribute('name of the template, [a-zA-Z_] only')
 
-    def get_base_path():
-        """ return FS base path for template of the skin
-        """
-
     def lookup_template(widget, name):
         """ return a template path or return None
         """
 
-    def render_widget(widget, request):
+    def render_widget(widget, name):
         """ render the widget with this skin
         """
 
@@ -26,10 +22,6 @@ class IWidget(Interface):
 
     def update():
         """ Prepare the view
-        """
-
-    def render():
-        """ render widget content this method is optional
         """
 
 
@@ -45,6 +37,9 @@ class IPage(IWidget):
         """ render resources for the namespace
         """
 
+    def render():
+        """ render content of the page
+        """
 
 class IFieldWidget(IWidget):
     """ widget to render a zope.schema field
