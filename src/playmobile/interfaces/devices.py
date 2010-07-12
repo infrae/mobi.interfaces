@@ -1,4 +1,14 @@
 from zope.interface import Interface, Attribute
+import logging
+logger = logging.getLogger('playmobile.devices')
+
+try:
+    from zope.publisher.interfaces.browser import IBrowserSkinType
+except (ImportError,):
+    logger.info('zope.publisher package not found, redeclare IBrowserSkinType')
+    from zope.interface.interfaces import IInterface
+    class IBrowserSkinType(IInterface):
+        pass
 
 
 class IDevice(Interface):
@@ -23,7 +33,7 @@ class IClassifier(Interface):
         """
 
 
-class IDeviceType(Interface):
+class IDeviceType(IBrowserSkinType):
     """ Base class for device types
     """
 
