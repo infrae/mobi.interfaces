@@ -1,0 +1,7 @@
+Changelog
+=========
+
+mobi.interfaces 1.0b1 (2010-07-14)
+----------------------------------
+
+* first release, see README.txt
