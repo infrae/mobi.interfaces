@@ -2,7 +2,7 @@
 
 from setuptools import setup, find_packages
 
-setup(name='playmobile.interfaces',
+setup(name='mobi.interfaces',
       version='0.1dev',
       description='Mobile Device management',
       author='Infrae',
@@ -10,7 +10,7 @@ setup(name='playmobile.interfaces',
       url='infrae.com',
       package_dir={'': 'src'},
       packages=find_packages('src'),
-      namespace_packages=['playmobile'],
+      namespace_packages=['mobi'],
       install_requires=[
         'zope.interface',
         'zope.schema',

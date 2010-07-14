@@ -1,6 +1,6 @@
 from zope.interface import Interface, Attribute
 import logging
-logger = logging.getLogger('playmobile.devices')
+logger = logging.getLogger('mobi.devices')
 
 try:
     from zope.publisher.interfaces.browser import IBrowserSkinType
