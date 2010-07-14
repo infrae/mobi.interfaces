@@ -1,4 +1,4 @@
-from zope.interface import Interface, Attribute
+from zope.interface import Interface
 import zope.schema.interfaces
 from zope.schema import TextLine
 
