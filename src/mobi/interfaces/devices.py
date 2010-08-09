@@ -1,6 +1,6 @@
 from zope.interface import Interface, Attribute
 import logging
-logger = logging.getLogger('mobi.devices')
+logger = logging.getLogger('mobi.interfaces')
 
 try:
     from zope.publisher.interfaces.browser import IBrowserSkinType
@@ -12,16 +12,9 @@ except (ImportError,):
 
 
 class IDevice(Interface):
-
-    user_agent = Attribute(""" User agent attribute """)
-
-    def get_type():
-        """ return a IDeviceType marker interface
-        """
-
-    def get_platform():
-        """ return the platform
-        """
+    user_agent = Attribute("User agent attribute")
+    type = Attribute("a IDeviceType marker interface")
+    platform = Attribute("Platform the device runs on")
 
 
 class IClassifier(Interface):
