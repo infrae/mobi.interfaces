@@ -3,14 +3,14 @@
 from setuptools import setup, find_packages
 import os
 
-VERSION='1.0b1'
+VERSION='1.0'
 
 setup(name='mobi.interfaces',
       version=VERSION,
       description='Mobile libs interfaces package',
-      long_description=open("README.txt").read() + "\n" +
+      long_description=open("README.rst").read() + "\n" +
                        open(os.path.join("docs", "HISTORY.txt")).read(),
-      author='Antonin Amand',
+      author='Antonin Amand at Infrae',
       author_email='info@infrae.com',
       url='http://infrae.com/',
       license='BSD',
