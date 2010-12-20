@@ -1,6 +1,11 @@
 Changelog
 =========
 
+mobi.interfaces 1.1 (unreleased)
+--------------------------------
+
+- add changes..
+
 mobi.interfaces 1.0 (2010-09-13)
 --------------------------------
 
